@@ -1,0 +1,41 @@
+.t-hover {
+	transition: opacity $transition-duration;
+
+	@include mouseover {
+		opacity: 0.7;
+	}
+}
+
+.t-desktop {
+
+	@include md-down {
+		display: none;
+	}
+}
+
+.t-mobile {
+	display: none;
+
+	@include md-down {
+		display: block;
+	}
+}
+
+.swiper-pagination-lock,
+.swiper-button-lock {
+	display: none !important;
+}
+
+.t-desktop {
+
+	@include md-down {
+		display: none !important;
+	}
+}
+
+.t-mobile {
+
+	@include md-up {
+		display: none !important;
+	}
+}

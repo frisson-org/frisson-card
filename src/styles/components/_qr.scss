@@ -1,0 +1,22 @@
+.f-qr {
+	margin-bottom: inEm(48px);
+
+	&__items {
+		column-gap: inEm(40px);
+	}
+
+	&__item {
+		width: inEm(152px);
+	}
+
+	&__code-container {
+		width: 100%;
+		aspect-ratio: 1/1;
+		margin-bottom: inEm(10px);
+	}
+
+	&__store-container {
+		width: 100%;
+		height: inEm(44px);
+	}
+}

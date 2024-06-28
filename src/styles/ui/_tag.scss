@@ -1,0 +1,15 @@
+.f-tag {
+
+	&__image-container {
+		width: inEm(24px);
+		height: inEm(24px);
+		margin-right: inEm(8px);
+	}
+
+	&__title {
+		font-size: 13px;
+		line-height: 16px;
+		font-weight: 500;
+		color: $blue;
+	}
+}
