@@ -1,4 +1,4 @@
-.t-hover {
+.f-hover {
 	transition: opacity $transition-duration;
 
 	@include mouseover {
@@ -6,14 +6,14 @@
 	}
 }
 
-.t-desktop {
+.f-desktop {
 
 	@include md-down {
 		display: none;
 	}
 }
 
-.t-mobile {
+.f-mobile {
 	display: none;
 
 	@include md-down {
@@ -26,16 +26,23 @@
 	display: none !important;
 }
 
-.t-desktop {
+.f-desktop {
 
 	@include md-down {
 		display: none !important;
 	}
 }
 
-.t-mobile {
+.f-mobile {
 
 	@include md-up {
 		display: none !important;
 	}
+}
+
+.f-heading-2 {
+	font-size: inEm(18px);
+	line-height: inEm(24px, 18px);
+	font-weight: 800;
+	color: $blue;
 }

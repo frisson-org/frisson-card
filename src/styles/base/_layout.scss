@@ -22,18 +22,17 @@ main {
 	overflow: hidden;
 	flex-grow: 1;
 	width: 100%;
-	margin-block: inEm(-17px);
-
-	@include md-down {
-		margin-block: inEmMob(-16px);
-	}
 }
 
 .f-outer {
 	width: 100%;
 	padding-inline: $base-outer-padding-desktop;
 
-	@include lg-down {
+	@include md-down {
+		padding-inline: inEm(94px);
+	}
+
+	@include sm-down {
 		padding-inline: $base-outer-padding-mobile;
 	}
 }
@@ -42,22 +41,50 @@ main {
 	width: 100%;
 	max-width: calc($base-container-width - $base-outer-padding-desktop * 2);
 	margin-inline: auto;
+
+	@include md-down {
+		max-width: inEm(646px);
+	}
 }
 
 .f-container {
 	width: 100%;
 	padding-top: inEm(40px);
-	padding-bottom: inEm(80px);
-	column-gap: inEm(99px);
+	padding-bottom: inEm(70px);
+
+	@include md-down {
+		flex-direction: column;
+		padding-top: inEm(20px);
+		padding-bottom: inEm(94px);
+	}
+
+	@include sm-down {
+		padding-top: 0;
+		padding-bottom: inEm(46px);
+	}
 
 	&__side {
 
 		&_content {
-			flex-grow: 1;
+			width: 43.8%;
+
+			@include md-down {
+				width: 100%;
+				max-width: inEm(567px);
+				order: 1;
+			}
+
+			@include sm-down {
+				max-width: none;
+			}
 		}
 
 		&_gallery {
-			width: inEm(646px);
+			width: 49.9%;
+
+			@include md-down {
+				width: 100%;
+			}
 		}
 	}
 }

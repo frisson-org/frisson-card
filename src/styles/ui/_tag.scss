@@ -1,4 +1,9 @@
 .f-tag {
+	margin-bottom: inEm(40px);
+
+	@include sm-down {
+		margin-bottom: inEm(32px);
+	}
 
 	&__image-container {
 		width: inEm(24px);

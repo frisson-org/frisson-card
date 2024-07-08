@@ -1,0 +1,91 @@
+.f-footer {
+	padding-block: inEm(88px);
+	color: $white;
+	background-image: url($img-path + '/footer-bg.svg');
+	background-color: $blue;
+	background-size: inEm(1322px) inEm(1321px);
+	background-position: center;
+	background-repeat: no-repeat;
+	overflow: hidden;
+
+	@include md-down {
+		padding-block: inEm(80px);
+		background-size: inEm(1116px);
+	}
+
+	@include sm-down {
+		padding-block: inEm(48px);
+		background-size: inEm(1010px);
+	}
+
+	&__logo-container {
+		width: inEm(118px);
+		height: inEm(24px);
+		margin-bottom: inEm(48px);
+
+		@include sm-down {
+			margin-bottom: inEm(40px);
+		}
+	}
+
+	&__title-container {
+		margin-bottom: inEm(24px);
+	}
+
+	&__title {
+		font-size: inEm(40px);
+		line-height: inEm(44px, 40px);
+		letter-spacing: inEm(-0.42px, 40px);
+		font-weight: 700;
+
+		@include sm-down {
+			font-size: inEm(30px);
+		}
+	}
+
+	&__description-container {
+		max-width: inEm(350px);
+		margin-bottom: inEm(48px);
+
+		@include sm-down {
+			max-width: inEm(320px);
+			margin-bottom: inEm(40px);
+		}
+	}
+
+	&__description {
+		font-size: inEm(16px);
+		line-height: inEm(24px, 16px);
+
+		@include sm-down {
+			font-size: inEm(15px);
+		}
+	}
+
+	&__copyright {
+		font-size: 13px;
+		line-height: inEm(16px, 13px);
+		color: $copyright;
+	}
+}
+
+.f-app-bar {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding-block: inEm(24px);
+	background-color: $blue;
+
+	@include sm-down {
+		padding-block: inEm(14px);
+	}
+
+	.f-qr {
+		margin-bottom: 0;
+
+		&__code-container {
+			display: none;
+		}
+	}
+}

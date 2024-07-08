@@ -1,8 +1,23 @@
 .f-qr {
 	margin-bottom: inEm(48px);
 
+	@include sm-down {
+		margin-bottom: inEm(40px);
+	}
+
+	&_header {
+
+		@include md-down {
+			display: none;
+		}
+	}
+
 	&__items {
 		column-gap: inEm(40px);
+
+		@include sm-down {
+			column-gap: inEm(16px);
+		}
 	}
 
 	&__item {
@@ -13,6 +28,10 @@
 		width: 100%;
 		aspect-ratio: 1/1;
 		margin-bottom: inEm(10px);
+
+		@include md-down {
+			display: none;
+		}
 	}
 
 	&__store-container {

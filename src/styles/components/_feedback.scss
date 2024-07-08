@@ -1,0 +1,79 @@
+.f-feedback {
+	width: inEm(424px);
+	max-width: 100%;
+	margin-bottom: inEm(32px);
+
+	&__title-container {
+		margin-bottom: inEm(16px);
+	}
+
+	&__items {
+		row-gap: inEm(16px);
+	}
+
+	&__more {
+		margin-right: inEm(5px);
+
+		&-container {
+			margin-top: inEm(26px, 15px);
+			font-size: inEm(15px);
+			line-height: inEm(20px, 15px);
+
+			@include sm-down {
+				flex-direction: column;
+				margin-top: inEm(24px, 15px);
+			}
+		}
+
+		&-link {
+			font-size: inEm(16px);
+			font-weight: 500;
+
+			@include sm-down {
+				margin-top: inEm(16px, 16px);
+			}
+		}
+	}
+}
+
+.f-feedback-item {
+	border: 1px solid $border;
+	border-radius: inEm(16px);
+	padding: inEm(12px);
+
+	&__image-container {
+		width: inEm(48px);
+		height: inEm(48px);
+		border-radius: 50%;
+		overflow: hidden;
+		margin-right: inEm(8px);
+	}
+
+	&__name {
+		font-size: inEm(16px);
+		line-height: inEm(24px, 16px);
+		font-weight: 700;
+		color: $blue;
+	}
+
+	&__date-container {
+		margin-top: inEm(4px);
+	}
+
+	&__date {
+		font-size: 10px;
+		line-height: inEm(12px, 10px);
+		font-weight: 500;
+		color: $text-gray;
+	}
+
+	&__feedback-container {
+		margin-top: inEm(12px);
+	}
+
+	&__feedback {
+		font-size: 13px;
+		line-height: inEm(16px, 13px);
+		color: $text-light;
+	}
+}

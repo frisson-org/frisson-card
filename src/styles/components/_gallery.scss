@@ -1,0 +1,103 @@
+.f-gallery {
+
+	@include md-down {
+		margin-bottom: inEm(48px);
+	}
+
+	@include sm-down {
+		margin-inline: inEm(-16px);
+		margin-bottom: inEm(32px);
+	}
+
+	&__item {
+		width: 100%;
+
+		@include md-up {
+			height: auto;
+			aspect-ratio: 1 / 1;
+		}
+
+		@include md-down {
+			height: inEm(480px);
+		}
+
+		@include sm-down {
+			height: inEm(400px);
+		}
+	}
+
+	&__nav {
+		z-index: 1;
+		width: inEm(56px);
+		height: inEm(56px);
+		border-radius: 50%;
+		border: 1px solid $accent;
+		background: $white;
+		top: 0;
+		bottom: 0;
+		margin-block: auto;
+
+		@include sm-down {
+			width: inEm(40px);
+			height: inEm(40px);
+			background: rgba($white, 0.6);
+			box-shadow: 0 1.31px 2px 0 rgba(1, 54, 96, 0.02);
+			border: none;
+		}
+
+		svg {
+			width: inEm(24px);
+			height: inEm(24px);
+
+			@include sm-down {
+				width: inEm(20px);
+				height: inEm(20px);
+			}
+		}
+
+		&_prev {
+			left: inEm(16px);
+		}
+
+		&_next {
+			right: inEm(16px);
+		}
+	}
+
+	&__pagination.swiper-pagination-horizontal {
+		z-index: 1;
+		width: auto;
+		max-width: inEm(470px);
+		left: inEm(16px);
+		right: inEm(16px);
+		bottom: inEm(13px);
+		margin-inline: auto;
+		display: grid;
+		grid-template-columns: repeat(auto-fit,minmax(1px, 1fr));
+		column-gap: inEm(8px);
+
+		@include md-down {
+			max-width: none;
+			bottom: inEm(16px);
+		}
+
+		.swiper-pagination-bullet {
+			margin: 0;
+			width: 100%;
+			height: inEm(8px);
+			border-radius: inEm(6px);
+			background: $white;
+			opacity: 0.6;
+			transition: opacity $transition-duration;
+
+			@include mouseover {
+				opacity: 0.4;
+			}
+
+			&.swiper-pagination-bullet-active {
+				pointer-events: none;
+				opacity: 1;
+			}
+		}
+	}
+}

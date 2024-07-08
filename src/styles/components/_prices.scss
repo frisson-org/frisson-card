@@ -1,0 +1,46 @@
+.f-prices {
+
+	&__title-container {
+		margin-bottom: inEm(6px);
+	}
+}
+
+.f-prices-item {
+	display: grid;
+	grid-template-columns: inEm(276px) max-content;
+	column-gap: inEm(16px);
+	width: max-content;
+	padding-block: inEm(10px);
+
+	@include sm-down {
+		grid-template-columns: auto max-content;
+		width: 100%;
+	}
+
+	&:not(:last-child) {
+		border-bottom: 1px solid $border;
+	}
+
+	&__title-container {
+		margin-bottom: inEm(6px);
+	}
+
+	&__title,
+	&__price {
+		font-size: inEm(16px);
+		line-height: inEm(24px, 16px);
+		font-weight: 700;
+		color: $blue;
+	}
+
+	&__description-container {
+		padding-right: inEm(50px);
+	}
+
+	&__description {
+		font-size: 13px;
+		line-height: inEm(16px, 13px);
+		color: $text-light;
+	}
+}
+

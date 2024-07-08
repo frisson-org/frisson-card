@@ -1,0 +1,87 @@
+.f-title {
+	margin-bottom: inEm(32px);
+
+	&__tags {
+		gap: inEm(8px);
+		margin-bottom: inEm(12px);
+	}
+
+	&__tag {
+		width: inEm(24px);
+		height: inEm(24px);
+	}
+
+	&__title {
+		font-size: inEm(30px);
+		line-height: inEm(32px, 30px);
+		letter-spacing: inEm(-1px, 30px);
+		font-weight: 700;
+
+		@include sm-down {
+			font-size: inEm(20px);
+			letter-spacing: normal;
+			font-weight: 800;
+			color: $blue;
+		}
+	}
+
+	&__description-container {
+		margin-top: inEm(12px);
+	}
+
+	&__description {
+		font-size: inEm(18px);
+		line-height: inEm(24px, 18px);
+		color: $text-secondary;
+	}
+
+	&__footer {
+		margin-top: inEm(12px);
+		column-gap: inEm(40px);
+	}
+
+	&__rating {
+		color: $orange;
+		font-size: 13px;
+		line-height: normal;
+
+		&-icon-container {
+			margin-right: inEm(4px);
+			width: inEm(16px);
+			height: inEm(16px);
+		}
+	}
+
+	&__distance {
+		font-size: 13px;
+		line-height: normal;
+		color: $text-light;
+
+		&::before {
+			content: '';
+			width: 4px;
+			height: 4px;
+			border-radius: 50%;
+			background: $blue;
+			margin-inline: inEm(8px);
+		}
+	}
+
+	&__cost {
+
+		@for $i from 1 through 4 {
+			&_level-#{$i} {
+
+				svg {
+
+					path {
+
+						&:nth-of-type(-n+#{$i}) {
+							fill: $blue;
+						}
+					}
+				}
+			}
+		}
+	}
+}
