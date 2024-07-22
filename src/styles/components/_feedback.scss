@@ -34,6 +34,25 @@
 			}
 		}
 	}
+
+	&__empty-container {
+		max-width: 100%;
+		width: inEm(232px);
+
+		@include sm-down {
+			margin-bottom: inEm(-8px);
+		}
+	}
+
+	&__empty-text {
+		font-size: inEm(18px);
+		line-height: inEm(24px, 18px);
+		color: $text-secondary;
+
+		@include sm-down {
+			font-size: inEm(15px);
+		}
+	}
 }
 
 .f-feedback-item {
