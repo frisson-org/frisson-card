@@ -42,7 +42,7 @@ const Feedback = ({ reviews = [] }) => {
 						}
 					</div>
 					<div className="f-feedback__more-container flex">
-						<span className="f-feedback__more">И ещё 16 отзывов в приложении Frisson.</span>
+						<span className="f-feedback__more">Больше отзывов в приложении Frisson.</span>
 						<a href="#" className="f-feedback__more-link f-hover">Посмотреть</a>
 					</div>
 				</> :
