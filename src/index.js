@@ -5,7 +5,7 @@ import {createBrowserRouter, createRoutesFromElements, Route, RouterProvider} fr
 
 const router = createBrowserRouter(
     createRoutesFromElements(
-        <Route path="/:id" element={<App />}>
+        <Route path="/places/:id" element={<App />}>
         </Route>
     )
 );
