@@ -2,7 +2,7 @@
   "name": "frisson-card-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "/places",
+  "homepage": "https://test.frissonapp.com/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
